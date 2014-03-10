@@ -1,4 +1,4 @@
-### CE_3
+##### CE_3
 ====
 
 So... this CE is about making a moore and mealy vhdl design of a four floor elevator.
@@ -17,6 +17,8 @@ The testbench was assumed to be correct for two reasons. Firstly, it matched up 
 
 ## Mealy Machine
 
-After creating the Moore machine, a Mealy machine was created to have the same functionality. The Mealy machine produced two outputs this time. This was the current state, and the next state. Both outputs were based on the inputs along with the current state, which is characteristic of a Mealy machine. The state output remained the same, whereas the next state output was created by looking at the diagram in the handout, and writing logic statements that satisfied the loops in the diagram. Each state had a hold, up, or down function which was written into the VHDL code, but states 1 and 4 were unique in that one could not go below or above floors 1 and 4 respectively. Afterwards, a testbench was created to simulate the design. The output can be seen below.
+After creating the Moore machine, a Mealy machine was created to have the same functionality. The Mealy machine produced two outputs this time. This was the current state, and the next state. Both outputs were based on the inputs along with the current state, which is characteristic of a Mealy machine. The state output remained the same, whereas the next state output was created by looking at the diagram in the handout, and writing logic statements that satisfied the loops in the diagram. Each state had a hold, up, or down function which was written into the VHDL code, but states 1 and 4 were unique in that one could not go below or above floors 1 and 4 respectively. Afterwards, a testbench was created to simulate the design. The output can be seen below. I should note that this waveform was broken into two pictures in order to display all the relevant data. They are both of the same waveform, but in a different time frame
 
-![alt text](http://i62.tinypic.com/2dhzj39.png)
+![alt text](http://i60.tinypic.com/2ez7fxk.png) ![alt text](http://i59.tinypic.com/dgic82.png)
+
+There was no explicit waveform to base or compare this waveform to, but we can see that the wave form is correct if we go through the different combinations in the two waveforms above. The state output is still the same as it should be,but the next state output is always 1 state away or the same state as the current state output. This at least visually makes sense. By going through the combinations individually, one can see the test bench and logic agree, which leads me to conclude that the mealy machine design is functional
